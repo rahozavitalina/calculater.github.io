@@ -1,0 +1,92 @@
+/* Общие стили */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px; 
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn.operator {
+    background-color: #ff9500;
+}
+
+.btn.clear {
+    background-color: #ff3b30;
+}
+
+.btn.equals {
+    grid-column: span 4;
+    background-color: #4cd964;
+}
+
+.btn:hover {
+    background-color: #666;
+}
+
+.btn.operator:hover {
+    background-color: #e68500;
+}
+
+.btn.clear:hover {
+    background-color: #e6361c;
+}
+
+.btn.equals:hover {
+    background-color: #3cc856;
+}
+
+/* Стиль для видео скримера */
+#screamer-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+}
+
+.screamer-video {
+    width: 80vw;  /* Размер видео */
+    max-height: 80vh;
+    border-radius: 10px;
+}
